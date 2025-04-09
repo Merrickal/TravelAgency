@@ -1,0 +1,298 @@
+/* style.css - General styles for the entire website */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header, main, footer {
+    width: 100%;
+
+}
+
+header {
+    background-color: #005a8d;
+    color: #fff;
+    padding: 15px 5%;
+    width: 100%;
+    margin-top: 0;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+main {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-height: 60vh;
+}
+
+.country {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.country h2 {
+    color: #005a8d;
+    margin-bottom: 10px;
+}
+
+.country-image-placeholder {
+    margin-top: 20px;
+    padding: 10px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #666;
+}
+
+.country-image-placeholder img {
+    max-width: 100%;
+    max-height: 300px;
+    display: block;
+    margin: auto;
+}
+
+.hotel-list-section h2 {
+    color: #005a8d;
+    margin-bottom: 15px;
+}
+
+#hotel-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#hotel-list li {
+    margin-bottom: 20px;
+    background-color: #e9f5ff;
+    border-radius: 5px;
+    border: 1px solid #cce7ff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 15px;
+}
+
+#hotel-list li:hover {
+    background-color: #d0eaff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#hotel-list li a {
+    color: #005a8d;
+    text-decoration: none;
+    font-weight: bold;
+    flex-grow: 1;
+    transition: color 0.3s ease;
+}
+
+#hotel-list li a:hover {
+    text-decoration: underline;
+    color: #003d66;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0;
+    color: #777;
+    border-top: 1px solid #eee;
+    width: 100%;
+    max-width: none;
+    background-color: #e2e2e2;
+}
+
+/* --- Styles for Individual Hotel Pages --- */
+
+.hotel-detail-page h1 {
+    color: #005a8d;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #005a8d;
+    padding-bottom: 10px;
+}
+
+.hotel-images {
+    margin-bottom: 30px;
+    min-height: 250px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #777;
+}
+
+.hotel-images img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+}
+
+.hotel-description {
+    margin-bottom: 30px;
+    font-size:14px
+}
+.hotel-image-placeholder{
+    width: auto;
+    height: 100%;
+}
+
+.room-selection {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.room-selection h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.4em;
+}
+
+.room-option {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.room-option:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.room-option label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.room-option input[type="radio"],
+.room-option input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.room-option span { /* For price or details */
+    margin-left: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+.booking-form button {
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto 0 auto;
+}
+
+.booking-form button:hover {
+    background-color: #218838; /* Darker green */
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: #005a8d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Styles for Index Page Specific Elements (index.html) --- */
+header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    margin-right: -1px;
+}
+
+.search-bar button {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 0 4px 4px 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #e9ecef;
+}
+
+#hotel-list li {
+    padding: 20px;
+}
+
+.hotel-list-thumbnail {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 20px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.hotel-info {
+    flex-grow: 1;
+}
+
+.hotel-info a {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.hotel-rating {
+    color: gold;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.hotel-amenities {
+    color: #555;
+    font-size: 0.9em;
+}

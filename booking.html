@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Information - Fuckface Flyaways</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+    <header>
+        <h1>Fuckface Flyaways</h1>
+    </header>
+
+    <main>
+        <h2>Enter Your Booking Information</h2>
+        <form id="personal-info-form">
+            <section>
+                <h3>Your Information (Main Contact)</h3>
+                <div class="form-group">
+                    <label for="main-name">Name:</label>
+                    <input type="text" id="main-name" name="main-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="main-email">Email:</label>
+                    <input type="email" id="main-email" name="main-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="main-phone">Phone:</label>
+                    <input type="tel" id="main-phone" name="main-phone">
+                </div>
+            </section>
+
+            <section>
+                <h3>Guests</h3>
+                <div id="guests-container">
+                    <div class="guest" data-guest-id="1">
+                        <h4>Guest 1 (Main Contact)</h4>
+                        <div class="form-group">
+                            <label for="adults-1">Adults:</label>
+                            <input type="number" id="adults-1" name="adults-1" value="1" min="1" class="adults-count">
+                        </div>
+                        <div class="form-group">
+                            <label for="children-1">Children:</label>
+                            <input type="number" id="children-1" name="children-1" value="0" min="0"
+                                class="children-count">
+                        </div>
+                        <div id="guest-details-1">
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="add-guest-btn">Add More Guests</button>
+            </section>
+
+            <section>
+                <h3>Room Details</h3>
+                <div id="room-details">
+                    <p>Hotel: <span id="hotel-name-display"></span></p>
+                    <p>Room Type: <span id="room-type-display"></span></p>
+                </div>
+            </section>
+
+            <button type="submit" class="submit-btn">Submit Booking Information</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fuckface Flyaways. All rights reserved.</p>
+    </footer>
+
+    <script src="booking.js"></script>
+</body>
+
+</html>
